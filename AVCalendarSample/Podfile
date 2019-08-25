@@ -1,0 +1,5 @@
+source 'https://github.com/vyasanirudh/AVSpecs.git' 
+target 'AVCalendarSample' do
+    use_frameworks!
+    pod 'AVCalendarFramework', '0.1.0'
+end
