@@ -14,6 +14,23 @@ pod 'AVCalendarFramework', '~> 0.1.1'
 
 A sample project has been added to explain the failrly simple usage process.
 
-Preview of the sample:
+---
+# Preview
 
 ![alt text](https://raw.githubusercontent.com/vyasanirudh/AVCalendar/master/AVCalendarSample/AVCalendarSample/Screenshot.png)
+
+---
+
+Development
+
+* [Anirudh Vyas](http://www.dextraltech.com)
+
+---
+
+# Feedback
+I'd love to hear the feedback. Create Github issues, or hit me up on http://www.dextraltech.com
+
+---
+
+# License
+`AVCalendarFramework` is available under the MIT license. See the LICENSE file for more info.
