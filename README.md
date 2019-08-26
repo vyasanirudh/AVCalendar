@@ -12,7 +12,7 @@ pod 'AVCalendarFramework', '~> 0.1.1'
 
 # Usage
 
-A sample project has been added to explain the failrly simple usage process.
+A sample project has been added to explain the fairly simple usage process.
 
 ---
 # Preview
