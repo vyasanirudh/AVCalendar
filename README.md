@@ -23,7 +23,7 @@ A sample project has been added to explain the failrly simple usage process.
 
 # Development
 
-* [Anirudh Vyas](www.linkedin.com/in/anirudh-vyas-90)
+* [Anirudh Vyas](https://github.com/vyasanirudh)
 
 ---
 
