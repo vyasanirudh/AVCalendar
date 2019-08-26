@@ -21,9 +21,9 @@ A sample project has been added to explain the failrly simple usage process.
 
 ---
 
-Development
+# Development
 
-* [Anirudh Vyas](http://www.dextraltech.com)
+* [Anirudh Vyas](www.linkedin.com/in/anirudh-vyas-90)
 
 ---
 
