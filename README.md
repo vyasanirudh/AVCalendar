@@ -2,7 +2,7 @@
 A sample to demonstrate the usage of AVCalendarFramework
 
 ---
-##Installing AVCalendar 
+## Installing AVCalendar 
 You can install AVCalendar in your project by using [CocoaPods](https://github.com/cocoapods/cocoapods):
 
 ```Ruby
