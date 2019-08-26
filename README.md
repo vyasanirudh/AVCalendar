@@ -3,12 +3,18 @@ A sample to demonstrate the usage of AVCalendarFramework
 
 ---
 # Installing 
-You can install AVCalendar in your project by using [CocoaPods](https://github.com/cocoapods/cocoapods):
+
+##[CocoaPods](https://github.com/cocoapods/cocoapods):
 
 ```Ruby
-source 'https://github.com/vyasanirudh/AVSpecs.git' #waiting for the push to pods' trunk.
+source 'https://github.com/vyasanirudh/AVSpecs.git' #waiting for the push to pods' trunk, till then add this source to your pod file.
 pod 'AVCalendarFramework', '~> 0.1.1'
 ```
+
+##Manually:
+
+Download the source code and [here](https://github.com/vyasanirudh/AVCalendar/archive/master.zip) and add that to your target dependencies by dragging it to your project navigator section. Further, add it to your embedded binaries section. That's it.
+
 ---
 
 # Usage
