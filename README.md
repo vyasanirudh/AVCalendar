@@ -1,8 +1,8 @@
 # AVCalendar ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
-A sample to demonstrate the usage of AVCalendarFramework
+This is a sample to demonstrate the usage of [AVCalendarFramework](https://github.com/vyasanirudh/AVCalendarFramework/archive/master.zip)
 
 ---
-# Installing 
+# Installing AVCalendarFramework
 
 ##[CocoaPods](https://github.com/cocoapods/cocoapods):
 
