@@ -13,7 +13,7 @@ pod 'AVCalendarFramework', '~> 0.1.1'
 
 ##Manually:
 
-Download the source code and [here](https://github.com/vyasanirudh/AVCalendar/archive/master.zip) and add that to your target dependencies by dragging it to your project navigator section. Further, add it to your embedded binaries section. That's it.
+Download the Framework [here](https://github.com/vyasanirudh/AVCalendarFramework/archive/master.zip) and add that to your target dependencies by dragging it to your project navigator section. Further, add it to your embedded binaries sectionand that's it.
 
 ---
 
