@@ -1,0 +1,11 @@
+framework module AVCalendarFramework {
+  umbrella header "AVCalendarFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module AVCalendarFramework.Swift {
+    header "AVCalendarFramework-Swift.h"
+    requires objc
+}
