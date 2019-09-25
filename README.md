@@ -1,19 +1,10 @@
 # AVCalendar ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
-This is a sample to demonstrate the usage of [AVCalendarFramework](https://github.com/vyasanirudh/AVCalendarFramework.git)
+A sample AVCalendar app.
 
 ---
-# Installing AVCalendarFramework
+# Adding AVCalendar
 
-##[CocoaPods](https://github.com/cocoapods/cocoapods):
-
-```Ruby
-source 'https://github.com/vyasanirudh/AVSpecs.git' #waiting for the push to pods' trunk, till then add this source to your pod file.
-pod 'AVCalendarFramework', '~> 0.1.1'
-```
-
-##Manually:
-
-Download the Framework [here](https://github.com/vyasanirudh/AVCalendarFramework/archive/master.zip) and add that to your target dependencies by dragging it to your project navigator section. Further, add it to your embedded binaries sectionand that's it.
+Just add the required files to your project space and you're done!
 
 ---
 
