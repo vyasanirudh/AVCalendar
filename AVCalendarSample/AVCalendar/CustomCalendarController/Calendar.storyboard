@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TaW-6V-vyl">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar View Controller-->
+        <scene sceneID="PeZ-eG-N2m">
+            <objects>
+                <viewController storyboardIdentifier="AVCalendarViewController" id="66b-cS-S1A" customClass="AVCalendarViewController" customModule="AVCalendarFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSx-22-IJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ers-cu-1nh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-4b-tii">
+                                        <rect key="frame" x="186.5" y="798" width="41" height="41.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="J0Z-4b-tii" secondAttribute="height" multiplier="1:1" id="efE-Qm-Diu"/>
+                                        </constraints>
+                                        <state key="normal" image="calendar_check"/>
+                                        <connections>
+                                            <action selector="closeButtonActionWithSender:" destination="66b-cS-S1A" eventType="touchUpInside" id="ovz-tp-Vhh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22352941176470587" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="J0Z-4b-tii" firstAttribute="centerX" secondItem="ers-cu-1nh" secondAttribute="centerX" id="4kx-4a-4mM"/>
+                                    <constraint firstItem="J0Z-4b-tii" firstAttribute="centerY" secondItem="ers-cu-1nh" secondAttribute="centerY" multiplier="1.9" id="ovJ-t5-zOn"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-N6-y7j">
+                                <rect key="frame" x="12.5" y="223" width="389" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kem-N6-y7j" secondAttribute="height" multiplier="389:450" id="9Qd-CJ-CED"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="TEV-Hz-sya" kind="embed" id="A08-u4-4sm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ers-cu-1nh" firstAttribute="bottom" secondItem="qL2-Tm-smJ" secondAttribute="bottom" id="4Sv-oi-272"/>
+                            <constraint firstItem="ers-cu-1nh" firstAttribute="trailing" secondItem="qL2-Tm-smJ" secondAttribute="trailing" id="SGk-MY-oZQ"/>
+                            <constraint firstItem="Kem-N6-y7j" firstAttribute="centerX" secondItem="bSx-22-IJQ" secondAttribute="centerX" id="Tvk-Ay-ATd"/>
+                            <constraint firstItem="Kem-N6-y7j" firstAttribute="width" secondItem="bSx-22-IJQ" secondAttribute="width" multiplier="0.94" id="X58-5e-soV"/>
+                            <constraint firstItem="ers-cu-1nh" firstAttribute="top" secondItem="bSx-22-IJQ" secondAttribute="top" id="Zut-Mx-AAt"/>
+                            <constraint firstItem="ers-cu-1nh" firstAttribute="leading" secondItem="qL2-Tm-smJ" secondAttribute="leading" id="fbM-uH-bix"/>
+                            <constraint firstItem="J0Z-4b-tii" firstAttribute="width" secondItem="bSx-22-IJQ" secondAttribute="width" multiplier="0.1" id="feF-u4-LvA"/>
+                            <constraint firstItem="Kem-N6-y7j" firstAttribute="centerY" secondItem="bSx-22-IJQ" secondAttribute="centerY" id="zeS-Ph-HW2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qL2-Tm-smJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gA1-fT-2rw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="ers-cu-1nh" id="Ccb-rX-e27"/>
+                        <outlet property="closeButton" destination="J0Z-4b-tii" id="V03-08-QFY"/>
+                        <outlet property="containerView" destination="Kem-N6-y7j" id="bF8-Vn-st6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jf-GZ-45C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.47826086956522" y="147.55434782608697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="veJ-dO-vCs">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="TaW-6V-vyl" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="82I-yh-f3C">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="66b-cS-S1A" kind="relationship" relationship="rootViewController" id="9qi-ja-EIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEf-U9-2WN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-870" y="148"/>
+        </scene>
+        <!--Custom Calendar Controller-->
+        <scene sceneID="PvO-fI-Jn1">
+            <objects>
+                <viewController id="TEV-Hz-sya" customClass="AVCustomCalendarController" customModule="AVCalendarFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xz4-2y-vjh">
+                        <rect key="frame" x="0.0" y="0.0" width="389" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-fi-0qZ">
+                                <rect key="frame" x="0.0" y="0.0" width="389" height="416"/>
+                                <color key="backgroundColor" red="0.34949347376823425" green="0.25439682602882385" blue="0.40001469850540161" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_partition" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-Y1-ehF">
+                                <rect key="frame" x="0.0" y="175" width="389" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9ql-Y1-ehF" secondAttribute="height" multiplier="389:3" id="e3S-86-RKR"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iu7-GO-KgV" customClass="AVHorizontalScrollCollectionView" customModule="AVCalendarFramework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="388.5" height="88"/>
+                                <color key="backgroundColor" red="0.49411764705882355" green="0.75294117647058822" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Iu7-GO-KgV" secondAttribute="height" multiplier="389:88" id="N6x-Cs-yol"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="32" id="QQ4-cG-vmq">
+                                    <size key="itemSize" width="63" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="8" maxX="15" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Mdq-MT-H8v" customClass="AVCustomCalendarYearCell" customModule="AVCalendarFramework" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="33" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1998" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGS-79-XAC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="0.4941176471" green="0.49019607840000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HGS-79-XAC" firstAttribute="top" secondItem="Mdq-MT-H8v" secondAttribute="top" id="8dV-qK-s0S"/>
+                                            <constraint firstAttribute="trailing" secondItem="HGS-79-XAC" secondAttribute="trailing" id="J8V-IQ-sTb"/>
+                                            <constraint firstAttribute="bottom" secondItem="HGS-79-XAC" secondAttribute="bottom" id="QoX-w4-sFJ"/>
+                                            <constraint firstItem="HGS-79-XAC" firstAttribute="leading" secondItem="Mdq-MT-H8v" secondAttribute="leading" id="gPb-Pp-gmz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="HGS-79-XAC" id="xR6-Be-DAu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TEV-Hz-sya" id="Ij0-5o-R0S"/>
+                                    <outlet property="delegate" destination="TEV-Hz-sya" id="uEz-96-Rcx"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="102" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XnJ-Rv-YYd" customClass="AVHorizontalScrollCollectionView" customModule="AVCalendarFramework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="389" height="88"/>
+                                <color key="backgroundColor" red="0.18305087089538574" green="0.23494401574134827" blue="0.37256473302841187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XnJ-Rv-YYd" secondAttribute="height" multiplier="389:88" id="53u-3G-t0E"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="32" id="h39-dr-3h6">
+                                    <size key="itemSize" width="63" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wfZ-JO-SCc" customClass="AVCustomCalendarYearCell" customModule="AVCalendarFramework" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="29" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-Fw-NwY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="lI3-Fw-NwY" firstAttribute="leading" secondItem="wfZ-JO-SCc" secondAttribute="leading" id="6pT-gR-8ZJ"/>
+                                            <constraint firstItem="lI3-Fw-NwY" firstAttribute="top" secondItem="wfZ-JO-SCc" secondAttribute="top" id="Em3-mL-tge"/>
+                                            <constraint firstAttribute="bottom" secondItem="lI3-Fw-NwY" secondAttribute="bottom" id="U7n-Ad-sB7"/>
+                                            <constraint firstAttribute="trailing" secondItem="lI3-Fw-NwY" secondAttribute="trailing" id="yuD-iB-QZO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="lI3-Fw-NwY" id="BxY-YC-sc4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TEV-Hz-sya" id="jNk-V6-Xan"/>
+                                    <outlet property="delegate" destination="TEV-Hz-sya" id="w7c-bX-KiP"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S8v-Z1-htO" customClass="AVHorizontalScrollCollectionView" customModule="AVCalendarFramework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="177" width="389" height="239"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="0.0001" id="YbY-iK-AYs">
+                                    <size key="itemSize" width="53" height="23"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="15" maxX="5" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KA9-P6-qje" customClass="AVCustomCalendarYearCell" customModule="AVCalendarFramework" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="15" width="53" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="53" height="23"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIB-l7-EKC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="53" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="qIB-l7-EKC" secondAttribute="bottom" id="Rga-eT-Cl0"/>
+                                            <constraint firstAttribute="trailing" secondItem="qIB-l7-EKC" secondAttribute="trailing" id="SDz-Fq-NCC"/>
+                                            <constraint firstItem="qIB-l7-EKC" firstAttribute="top" secondItem="KA9-P6-qje" secondAttribute="top" id="d8Y-7S-AYN"/>
+                                            <constraint firstItem="qIB-l7-EKC" firstAttribute="leading" secondItem="KA9-P6-qje" secondAttribute="leading" id="n4e-B6-SoW"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="qIB-l7-EKC" id="BJZ-n6-g8k"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TEV-Hz-sya" id="OPO-II-HGF"/>
+                                    <outlet property="delegate" destination="TEV-Hz-sya" id="aCl-IE-VFc"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_left_year_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="1RY-Ip-Xfm">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="88"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_left_month_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="lNY-JH-7D0">
+                                <rect key="frame" x="0.0" y="88" width="70" height="88"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_right_month_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="HRH-A2-h0c">
+                                <rect key="frame" x="319" y="88" width="70" height="88"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_right_year_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ug7-I8-A4H">
+                                <rect key="frame" x="319" y="0.0" width="70" height="88"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9ql-Y1-ehF" firstAttribute="leading" secondItem="xz4-2y-vjh" secondAttribute="leading" id="0bh-Pb-7by"/>
+                            <constraint firstAttribute="trailing" secondItem="Iu7-GO-KgV" secondAttribute="trailing" constant="0.33000000000000002" id="2Ri-IY-Z3d"/>
+                            <constraint firstItem="HRH-A2-h0c" firstAttribute="width" secondItem="xz4-2y-vjh" secondAttribute="width" multiplier="0.18" id="2p8-jP-Q6U"/>
+                            <constraint firstItem="FOl-lE-rx6" firstAttribute="trailing" secondItem="HRH-A2-h0c" secondAttribute="trailing" id="3PJ-Sx-m3K"/>
+                            <constraint firstItem="lNY-JH-7D0" firstAttribute="width" secondItem="xz4-2y-vjh" secondAttribute="width" multiplier="0.18" id="4Up-x5-WaY"/>
+                            <constraint firstItem="S8v-Z1-htO" firstAttribute="top" secondItem="9ql-Y1-ehF" secondAttribute="bottom" constant="-1" id="4lc-u1-fgS"/>
+                            <constraint firstItem="Ug7-I8-A4H" firstAttribute="centerY" secondItem="Iu7-GO-KgV" secondAttribute="centerY" id="6Xx-j4-xHp"/>
+                            <constraint firstItem="XnJ-Rv-YYd" firstAttribute="top" secondItem="Iu7-GO-KgV" secondAttribute="bottom" id="750-Gd-PQp"/>
+                            <constraint firstItem="9ql-Y1-ehF" firstAttribute="top" secondItem="XnJ-Rv-YYd" secondAttribute="bottom" constant="-1" id="A8k-41-a3I"/>
+                            <constraint firstItem="1RY-Ip-Xfm" firstAttribute="height" secondItem="Iu7-GO-KgV" secondAttribute="height" id="AmA-in-x2k"/>
+                            <constraint firstItem="lNY-JH-7D0" firstAttribute="height" secondItem="XnJ-Rv-YYd" secondAttribute="height" id="AxS-Ua-23g"/>
+                            <constraint firstAttribute="trailing" secondItem="XnJ-Rv-YYd" secondAttribute="trailing" id="Cn5-23-tFs"/>
+                            <constraint firstItem="S8v-Z1-htO" firstAttribute="trailing" secondItem="FOl-lE-rx6" secondAttribute="trailing" id="FSZ-7N-nWA"/>
+                            <constraint firstAttribute="trailing" secondItem="9ql-Y1-ehF" secondAttribute="trailing" id="FdE-gs-f2R"/>
+                            <constraint firstItem="S8v-Z1-htO" firstAttribute="leading" secondItem="FOl-lE-rx6" secondAttribute="leading" id="FhH-1H-Ezx"/>
+                            <constraint firstItem="HRH-A2-h0c" firstAttribute="height" secondItem="XnJ-Rv-YYd" secondAttribute="height" id="FpV-5C-KO9"/>
+                            <constraint firstItem="Ug7-I8-A4H" firstAttribute="height" secondItem="Iu7-GO-KgV" secondAttribute="height" id="Jfd-hc-aAs"/>
+                            <constraint firstItem="1RY-Ip-Xfm" firstAttribute="width" secondItem="xz4-2y-vjh" secondAttribute="width" multiplier="0.18" id="OEA-8Y-lZC"/>
+                            <constraint firstItem="lNY-JH-7D0" firstAttribute="centerY" secondItem="XnJ-Rv-YYd" secondAttribute="centerY" id="Xrn-2f-CVh"/>
+                            <constraint firstItem="mIC-fi-0qZ" firstAttribute="leading" secondItem="FOl-lE-rx6" secondAttribute="leading" id="YSa-eR-wCN"/>
+                            <constraint firstItem="HRH-A2-h0c" firstAttribute="centerY" secondItem="XnJ-Rv-YYd" secondAttribute="centerY" id="ZJR-ML-Kqv"/>
+                            <constraint firstItem="lNY-JH-7D0" firstAttribute="leading" secondItem="FOl-lE-rx6" secondAttribute="leading" id="ezx-TF-Xpg"/>
+                            <constraint firstItem="FOl-lE-rx6" firstAttribute="bottom" secondItem="S8v-Z1-htO" secondAttribute="bottom" id="g4C-SN-Gqu"/>
+                            <constraint firstItem="Ug7-I8-A4H" firstAttribute="width" secondItem="xz4-2y-vjh" secondAttribute="width" multiplier="0.18" id="h9R-zI-UOw"/>
+                            <constraint firstItem="1RY-Ip-Xfm" firstAttribute="centerY" secondItem="Iu7-GO-KgV" secondAttribute="centerY" id="hFz-9d-nIK"/>
+                            <constraint firstItem="1RY-Ip-Xfm" firstAttribute="leading" secondItem="FOl-lE-rx6" secondAttribute="leading" id="hfg-f7-4Ws"/>
+                            <constraint firstItem="Iu7-GO-KgV" firstAttribute="leading" secondItem="xz4-2y-vjh" secondAttribute="leading" id="igp-mv-hoE"/>
+                            <constraint firstItem="Iu7-GO-KgV" firstAttribute="top" secondItem="xz4-2y-vjh" secondAttribute="top" id="kxj-k4-Tg3"/>
+                            <constraint firstItem="FOl-lE-rx6" firstAttribute="trailing" secondItem="mIC-fi-0qZ" secondAttribute="trailing" id="r3P-VX-wGD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ug7-I8-A4H" secondAttribute="trailing" id="som-0v-i6c"/>
+                            <constraint firstItem="FOl-lE-rx6" firstAttribute="bottom" secondItem="mIC-fi-0qZ" secondAttribute="bottom" id="wAx-jA-9VK"/>
+                            <constraint firstItem="mIC-fi-0qZ" firstAttribute="top" secondItem="xz4-2y-vjh" secondAttribute="top" id="xpU-Wb-0wY"/>
+                            <constraint firstItem="XnJ-Rv-YYd" firstAttribute="leading" secondItem="xz4-2y-vjh" secondAttribute="leading" id="zrA-YD-Byy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FOl-lE-rx6"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateCollectionGrid" destination="S8v-Z1-htO" id="fCE-ZD-8RO"/>
+                        <outlet property="monthCollectionGrid" destination="XnJ-Rv-YYd" id="0Oh-qv-xkf"/>
+                        <outlet property="yearCollectionGrid" destination="Iu7-GO-KgV" id="2ZZ-8o-dpY"/>
+                        <outletCollection property="yearSideShades" destination="1RY-Ip-Xfm" collectionClass="NSMutableArray" id="jMd-Pd-Gh5"/>
+                        <outletCollection property="yearSideShades" destination="Ug7-I8-A4H" collectionClass="NSMutableArray" id="Opm-Vs-Cqy"/>
+                        <outletCollection property="monthSideShades" destination="lNY-JH-7D0" collectionClass="NSMutableArray" id="8BZ-G1-B7J"/>
+                        <outletCollection property="monthSideShades" destination="HRH-A2-h0c" collectionClass="NSMutableArray" id="fTf-Np-aF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHg-gJ-0W6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606.52173913043487" y="147.55434782608697"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar_check" width="43" height="43"/>
+        <image name="calendar_left_month_gradient" width="51" height="22"/>
+        <image name="calendar_left_year_gradient" width="50" height="22"/>
+        <image name="calendar_partition" width="389" height="4"/>
+        <image name="calendar_right_month_gradient" width="70" height="22"/>
+        <image name="calendar_right_year_gradient" width="59" height="22"/>
+    </resources>
+</document>

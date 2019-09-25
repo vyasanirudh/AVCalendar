@@ -14,7 +14,13 @@
 		173925BF231303F400EFC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173925BD231303F400EFC5C3 /* LaunchScreen.storyboard */; };
 		173925CA231303F400EFC5C3 /* AVCalendarSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173925C9231303F400EFC5C3 /* AVCalendarSampleTests.swift */; };
 		173925D5231303F400EFC5C3 /* AVCalendarSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173925D4231303F400EFC5C3 /* AVCalendarSampleUITests.swift */; };
-		1ABCA4F04111D8F424A4F7DB /* Pods_AVCalendarSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC95E4E3592B270E33C7F28 /* Pods_AVCalendarSample.framework */; };
+		17594C0E233B0B710010AB9B /* APDynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C05233B0B710010AB9B /* APDynamicType.swift */; };
+		17594C0F233B0B710010AB9B /* APHorizontalScrollCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C07233B0B710010AB9B /* APHorizontalScrollCollectionView.swift */; };
+		17594C10233B0B710010AB9B /* APCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C08233B0B710010AB9B /* APCalendarViewController.swift */; };
+		17594C11233B0B710010AB9B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17594C09233B0B710010AB9B /* Calendar.storyboard */; };
+		17594C12233B0B710010AB9B /* APCustomCalendarYearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */; };
+		17594C13233B0B710010AB9B /* APCustomCalendarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C0C233B0B710010AB9B /* APCustomCalendarContainer.swift */; };
+		17594C14233B0B710010AB9B /* CalendarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17594C0D233B0B710010AB9B /* CalendarAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C8413874F2F2B2BF1B7C866 /* Pods-AVCalendarSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCalendarSample.release.xcconfig"; path = "Target Support Files/Pods-AVCalendarSample/Pods-AVCalendarSample.release.xcconfig"; sourceTree = "<group>"; };
 		173925B1231303F300EFC5C3 /* AVCalendarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCalendarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173925B4231303F300EFC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		173925B6231303F300EFC5C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +54,13 @@
 		173925D0231303F400EFC5C3 /* AVCalendarSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVCalendarSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173925D4231303F400EFC5C3 /* AVCalendarSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCalendarSampleUITests.swift; sourceTree = "<group>"; };
 		173925D6231303F400EFC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7AC95E4E3592B270E33C7F28 /* Pods_AVCalendarSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCalendarSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8486B410DD28BFF2629479BC /* Pods-AVCalendarSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCalendarSample.debug.xcconfig"; path = "Target Support Files/Pods-AVCalendarSample/Pods-AVCalendarSample.debug.xcconfig"; sourceTree = "<group>"; };
+		17594C05233B0B710010AB9B /* APDynamicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDynamicType.swift; sourceTree = "<group>"; };
+		17594C07233B0B710010AB9B /* APHorizontalScrollCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APHorizontalScrollCollectionView.swift; sourceTree = "<group>"; };
+		17594C08233B0B710010AB9B /* APCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCalendarViewController.swift; sourceTree = "<group>"; };
+		17594C09233B0B710010AB9B /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCustomCalendarYearCell.swift; sourceTree = "<group>"; };
+		17594C0C233B0B710010AB9B /* APCustomCalendarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCustomCalendarContainer.swift; sourceTree = "<group>"; };
+		17594C0D233B0B710010AB9B /* CalendarAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CalendarAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ABCA4F04111D8F424A4F7DB /* Pods_AVCalendarSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +91,12 @@
 		173925A8231303F300EFC5C3 = {
 			isa = PBXGroup;
 			children = (
+				17594C03233B0B710010AB9B /* AVCalendar */,
 				173925B3231303F300EFC5C3 /* AVCalendarSample */,
 				173925C8231303F400EFC5C3 /* AVCalendarSampleTests */,
 				173925D3231303F400EFC5C3 /* AVCalendarSampleUITests */,
 				173925B2231303F300EFC5C3 /* Products */,
 				4C33B577FB31A4D20C6739F1 /* Pods */,
-				416F6D6A8240C238F8DB1BE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,21 +141,48 @@
 			path = AVCalendarSampleUITests;
 			sourceTree = "<group>";
 		};
-		416F6D6A8240C238F8DB1BE6 /* Frameworks */ = {
+		17594C03233B0B710010AB9B /* AVCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				7AC95E4E3592B270E33C7F28 /* Pods_AVCalendarSample.framework */,
+				17594C04233B0B710010AB9B /* DynamicType */,
+				17594C06233B0B710010AB9B /* CustomCalendarController */,
 			);
-			name = Frameworks;
+			path = AVCalendar;
+			sourceTree = "<group>";
+		};
+		17594C04233B0B710010AB9B /* DynamicType */ = {
+			isa = PBXGroup;
+			children = (
+				17594C05233B0B710010AB9B /* APDynamicType.swift */,
+			);
+			path = DynamicType;
+			sourceTree = "<group>";
+		};
+		17594C06233B0B710010AB9B /* CustomCalendarController */ = {
+			isa = PBXGroup;
+			children = (
+				17594C07233B0B710010AB9B /* APHorizontalScrollCollectionView.swift */,
+				17594C08233B0B710010AB9B /* APCalendarViewController.swift */,
+				17594C09233B0B710010AB9B /* Calendar.storyboard */,
+				17594C0A233B0B710010AB9B /* APCustomCalenderCells */,
+				17594C0C233B0B710010AB9B /* APCustomCalendarContainer.swift */,
+				17594C0D233B0B710010AB9B /* CalendarAssets.xcassets */,
+			);
+			path = CustomCalendarController;
+			sourceTree = "<group>";
+		};
+		17594C0A233B0B710010AB9B /* APCustomCalenderCells */ = {
+			isa = PBXGroup;
+			children = (
+				17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */,
+			);
+			path = APCustomCalenderCells;
 			sourceTree = "<group>";
 		};
 		4C33B577FB31A4D20C6739F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8486B410DD28BFF2629479BC /* Pods-AVCalendarSample.debug.xcconfig */,
-				0C8413874F2F2B2BF1B7C866 /* Pods-AVCalendarSample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,11 +193,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 173925D9231303F400EFC5C3 /* Build configuration list for PBXNativeTarget "AVCalendarSample" */;
 			buildPhases = (
-				6D5E3009F5C23DDA20D43009 /* [CP] Check Pods Manifest.lock */,
 				173925AD231303F300EFC5C3 /* Sources */,
 				173925AE231303F300EFC5C3 /* Frameworks */,
 				173925AF231303F300EFC5C3 /* Resources */,
-				01527BABC6F75D92A3897145 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17594C11233B0B710010AB9B /* Calendar.storyboard in Resources */,
+				17594C14233B0B710010AB9B /* CalendarAssets.xcassets in Resources */,
 				173925BF231303F400EFC5C3 /* LaunchScreen.storyboard in Resources */,
 				173925BC231303F400EFC5C3 /* Assets.xcassets in Resources */,
 				173925BA231303F300EFC5C3 /* Main.storyboard in Resources */,
@@ -278,55 +314,18 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		01527BABC6F75D92A3897145 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVCalendarSample/Pods-AVCalendarSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVCalendarSample/Pods-AVCalendarSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVCalendarSample/Pods-AVCalendarSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D5E3009F5C23DDA20D43009 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVCalendarSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		173925AD231303F300EFC5C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17594C12233B0B710010AB9B /* APCustomCalendarYearCell.swift in Sources */,
 				173925B7231303F300EFC5C3 /* ViewController.swift in Sources */,
 				173925B5231303F300EFC5C3 /* AppDelegate.swift in Sources */,
+				17594C13233B0B710010AB9B /* APCustomCalendarContainer.swift in Sources */,
+				17594C0F233B0B710010AB9B /* APHorizontalScrollCollectionView.swift in Sources */,
+				17594C0E233B0B710010AB9B /* APDynamicType.swift in Sources */,
+				17594C10233B0B710010AB9B /* APCalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +498,6 @@
 		};
 		173925DA231303F400EFC5C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8486B410DD28BFF2629479BC /* Pods-AVCalendarSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -519,7 +517,6 @@
 		};
 		173925DB231303F400EFC5C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C8413874F2F2B2BF1B7C866 /* Pods-AVCalendarSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import AVCalendarFramework
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var selectDateButton: UIButton!
-    var calendar: AVCalendarViewController = AVCalendarViewController.calendar
-    
+    private let calendar: AVCalendarViewController = AVCalendarViewController.calendar
+    private var selectedDate: AVDate?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,17 +31,17 @@ class ViewController: UIViewController {
         calendar.monthStyleComponents = CalendarComponentStyle(backgroundColor: UIColor(red: 47/255, green: 60/255, blue: 95/255, alpha: 1.0),
                                                                textColor: UIColor(red: 126/255, green: 192/255, blue: 196/255, alpha: 1.0),
                                                                highlightColor: UIColor.white)
-        calendar.subscriber = { (date) in
+        calendar.subscriber = { [weak self] (date) in guard let checkedSelf = self else { return }
             if date != nil {
+                checkedSelf.selectedDate = date
                 let _ = Date(timeIntervalSince1970: TimeInterval(date?.doubleVal ?? 0))
                 if let day = date?.day, let month = date?.month, let year = date?.year {
                     let dateString = day + " " + month + " " + year
-                    self.selectDateButton.setTitle(dateString, for: .normal)
+                    checkedSelf.selectDateButton.setTitle(dateString, for: .normal)
                 }
-            } else {
-                
             }
         }
+        calendar.preSelectedDate = selectedDate
         self.present(calendar, animated: false, completion: nil)
     }
 
