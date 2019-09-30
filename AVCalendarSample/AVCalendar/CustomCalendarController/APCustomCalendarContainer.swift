@@ -45,14 +45,15 @@ internal struct _AVDate {
     public var doubleVal: Double? {
         mutating get {
             let dfmatter = DateFormatter()
-            dfmatter.dateFormat="yyyy-MM-dd"
-            if let _year = year, let _month = calendarComponents.months.firstIndex(of: month!), let _day = calendarComponents.dates.value?.firstIndex(of: day!) {
-                let _date = dfmatter.date(from: "\(_year)-\(_month + 1)-\(_day + 2)")
+            dfmatter.dateFormat="yyyy-MM-dd'T'HH:mm:ssZ"
+            dfmatter.timeZone = .current
+            if let _year = year, let _month = calendarComponents.months.firstIndex(of: month!), let day = day, let _day = calendarComponents.dates.value?.firstIndex(of: day) {
+                let _date = dfmatter.date(from: "\(_year)-\(_month + 1)-\(_day + 1)T00:00:00+0000")
                 if let dateStamp = _date?.timeIntervalSince1970 {
                     return dateStamp
                 }
             }
-            return 0.0
+            return nil
         }
     }
     
@@ -181,7 +182,6 @@ class AVCustomCalendarController: UIViewController {
         didSet {
             let bundle = Bundle(for: AVCustomCalendarController.self)
             for view in yearSideShades {
-                print("YEAR TAG: \(view.tag)")
                 if view.tag == 100, let _image = UIImage(named: "calendar_left_year_gradient", in: bundle, compatibleWith: nil) {
                     view.image = _image.withRenderingMode(.alwaysTemplate)
                 } else if view.tag == 200, let _image = UIImage(named: "calendar_right_year_gradient", in: bundle, compatibleWith: nil) {
@@ -196,7 +196,6 @@ class AVCustomCalendarController: UIViewController {
         didSet {
             let bundle = Bundle(for: AVCustomCalendarController.self)
             for view in monthSideShades {
-                print("MONTH TAG: \(view.tag)")
                 if view.tag == 100, let _image = UIImage(named: "calendar_left_month_gradient", in: bundle, compatibleWith: nil) {
                     view.image = _image.withRenderingMode(.alwaysTemplate)
                 } else if view.tag == 200, let _image = UIImage(named: "calendar_right_month_gradient", in: bundle, compatibleWith: nil) {
@@ -256,6 +255,7 @@ class AVCustomCalendarController: UIViewController {
         }
         yearCollectionGrid.scrollToItem(at: IndexPath(row: indices.year, section: 0), at: .centeredHorizontally, animated: false)
         monthCollectionGrid.scrollToItem(at: IndexPath(row: indices.month, section: 0), at: .centeredHorizontally, animated: false)
+        viewModel.updateDate()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.updateCellTransform(with: CGAffineTransform(scaleX: 1.3, y: 1.3), cell: self.yearCollectionGrid.cellForItem(at: IndexPath(row: indices.year, section: 0)) as! AVCustomCalendarYearCell, withHighlightColor: self._yearStyleComponents?.highlightColor)
             self.updateCellTransform(with: CGAffineTransform(scaleX: 1.3, y: 1.3), cell: self.monthCollectionGrid.cellForItem(at: IndexPath(row: indices.month, section: 0)) as! AVCustomCalendarYearCell, withHighlightColor: self._monthStyleComponents?.highlightColor)
@@ -275,14 +275,16 @@ class AVCustomCalendarController: UIViewController {
         }
     }
     
-    func getDate() -> AVDate {
-        _ = viewModel.date.doubleVal //Calculate double value.
-        var date = AVDate()
-        date.day = viewModel.date.day
-        date.month = viewModel.date.month
-        date.year = viewModel.date.year
-        date.doubleVal = viewModel.date.doubleVal
-        return date
+    func getDate() -> AVDate? {
+        if let _ = viewModel.date.doubleVal { //Calculate double value.
+            var date = AVDate()
+            date.day = viewModel.date.day
+            date.month = viewModel.date.month
+            date.year = viewModel.date.year
+            date.doubleVal = viewModel.date.doubleVal
+            return date
+        }
+        return nil
     }
 }
 

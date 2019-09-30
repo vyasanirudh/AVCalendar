@@ -121,26 +121,29 @@ open class AVCalendarViewController: UIViewController {
     
     @IBAction func closeButtonAction(sender: UIButton) {
         if let vc = self.calendarVC {
-            let dateSelected = vc.getDate()
-            if dateSelected.day == nil {
-                if let _subscriber = self.subscriber {
-                    _subscriber(nil)
+            if let dateSelected = vc.getDate() {
+                if dateSelected.day == nil {
+                    if let _subscriber = self.subscriber {
+                        _subscriber(nil)
+                    }
+                    return
+                } else {
+                    if let _subscriber = self.subscriber {
+                        _subscriber(dateSelected)
+                    }
                 }
-                return
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+                    self.containerView.alpha = 0.0
+                    self.closeButton.alpha = 0.0
+                    self.backgroundView.alpha = 0.0
+                    self.containerView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                    self.closeButton.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                }) { (done) in
+                    self.dismiss(animated: false, completion: nil)
+                }
             } else {
-                if let _subscriber = self.subscriber {
-                    _subscriber(dateSelected)
-                }
+                sender.generateFeedback()
             }
-        }
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-            self.containerView.alpha = 0.0
-            self.closeButton.alpha = 0.0
-            self.backgroundView.alpha = 0.0
-            self.containerView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-            self.closeButton.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-        }) { (done) in
-            self.dismiss(animated: false, completion: nil)
         }
     }
     

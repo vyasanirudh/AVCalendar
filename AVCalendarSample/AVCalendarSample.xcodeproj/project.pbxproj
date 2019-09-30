@@ -21,6 +21,7 @@
 		17594C12233B0B710010AB9B /* APCustomCalendarYearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */; };
 		17594C13233B0B710010AB9B /* APCustomCalendarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17594C0C233B0B710010AB9B /* APCustomCalendarContainer.swift */; };
 		17594C14233B0B710010AB9B /* CalendarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17594C0D233B0B710010AB9B /* CalendarAssets.xcassets */; };
+		17D8AD8D2341E4EB00730E56 /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8AD8C2341E4EB00730E56 /* HapticFeedbackGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCustomCalendarYearCell.swift; sourceTree = "<group>"; };
 		17594C0C233B0B710010AB9B /* APCustomCalendarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APCustomCalendarContainer.swift; sourceTree = "<group>"; };
 		17594C0D233B0B710010AB9B /* CalendarAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CalendarAssets.xcassets; sourceTree = "<group>"; };
+		17D8AD8C2341E4EB00730E56 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		17594C03233B0B710010AB9B /* AVCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				17D8AD8B2341E4D200730E56 /* Protocols */,
 				17594C04233B0B710010AB9B /* DynamicType */,
 				17594C06233B0B710010AB9B /* CustomCalendarController */,
 			);
@@ -177,6 +180,14 @@
 				17594C0B233B0B710010AB9B /* APCustomCalendarYearCell.swift */,
 			);
 			path = APCustomCalenderCells;
+			sourceTree = "<group>";
+		};
+		17D8AD8B2341E4D200730E56 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				17D8AD8C2341E4EB00730E56 /* HapticFeedbackGenerator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4C33B577FB31A4D20C6739F1 /* Pods */ = {
@@ -324,6 +335,7 @@
 				173925B5231303F300EFC5C3 /* AppDelegate.swift in Sources */,
 				17594C13233B0B710010AB9B /* APCustomCalendarContainer.swift in Sources */,
 				17594C0F233B0B710010AB9B /* APHorizontalScrollCollectionView.swift in Sources */,
+				17D8AD8D2341E4EB00730E56 /* HapticFeedbackGenerator.swift in Sources */,
 				17594C0E233B0B710010AB9B /* APDynamicType.swift in Sources */,
 				17594C10233B0B710010AB9B /* APCalendarViewController.swift in Sources */,
 			);
